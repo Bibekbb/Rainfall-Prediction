@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='after_rainy.css') }}">
+    <title>Sunny Day</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top right, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-top: 50px;
+            color: #ff7e5f;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .rainyimg {
+            margin: 30px auto;
+        }
+
+        .rainyimg img {
+            max-width: 80%;
+            height: auto;
+            width: 400px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .rainyimg img:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+            margin: 20px;
+        }
+
+        h2 span {
+            font-style: italic;
+            font-weight: 700;
+            color: #ff6f61;
+        }
+
+        /* Home button styling */
+        .home-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            background-color: #ff7e5f;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #ff6f61;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>SUNNY DAY</h1>
+    <div class="rainyimg">
+        <img src="{{ url_for('static', filename='sunnyday.jpg') }}" alt="Sunny Day">
+    </div>
+    <h2>
+        Get ready for a bright <span>sunny day</span> tomorrow! It’s the perfect time to step outside, soak in the sunshine, and treat yourself to a refreshing milkshake or your favorite ice cream. Don’t forget the sunglasses!
+    </h2>
+    
+
+    <!-- Home Button -->
+    <a href="/" class="home-button">Home</a>
+</body>
+</html>
